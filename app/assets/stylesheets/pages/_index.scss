@@ -31,3 +31,15 @@ body {
   font-size: 32px;
   font-weight: bold;
 }
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
+.card-category {
+  height: 425px;
+}

@@ -37,12 +37,28 @@
 </div>
 
 
-<% @cocktails.each do |cocktail| %>
-<%= link_to cocktail_path(cocktail) do %>
-<!-- <p><%= cocktail.name %></p> -->
-<% end %>
-<% end %>
 <br>
 <br>
 <br>
 <%= link_to 'Create', new_cocktail_path, class: "btn btn-danger btn-lg center-block" %>
+
+
+<div class="container mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="cards">
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-sm">
+          <% if cocktail.photo.attached? %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo.key %>)">
+             <%= cocktail.name %>
+            </div>
+           <% end %>
+         <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
