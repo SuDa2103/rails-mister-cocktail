@@ -1,4 +1,27 @@
-<h1>Cocktails</h1>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>Cocktails</h1>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1549746434-6331eadece3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+
+          <%= link_to 'View Cocktail', cocktail_path(cocktail), class: "btn btn-primary"%>
+        </div>
+      </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+
 
 <% @cocktails.each do |cocktail| %>
 <%= link_to cocktail_path(cocktail) do %>
