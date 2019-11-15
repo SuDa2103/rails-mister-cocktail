@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 text-center">
       <h1>Cocktails</h1>
     </div>
   </div>
@@ -11,7 +11,7 @@
       <div class="col-sm">
       <div class="card" style="width: 18rem;">
         <% if cocktail.photo.attached? %>
-        <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag cocktail.photo.key, height: 425, width: 285, crop: :fill %>
         <% else %>
         <img src="https://images.unsplash.com/photo-1549746434-6331eadece3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" class="card-img-top" alt="...">
         <% end %>
@@ -32,5 +32,7 @@
 <!-- <p><%= cocktail.name %></p> -->
 <% end %>
 <% end %>
-
-<%= link_to 'Create', new_cocktail_path %>
+<br>
+<br>
+<br>
+<%= link_to 'Create', new_cocktail_path, class: "btn btn-danger btn-lg center-block" %>
